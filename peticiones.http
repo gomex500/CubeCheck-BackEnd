@@ -1,3 +1,40 @@
-@api = http://127.0.0.1:3000/
+@api = http://127.0.0.1:3000
 
 GET {{api}}
+
+###
+GET {{api}}/users
+
+###
+GET {{api}}/user/64fff3e826287fc9c4631b39
+
+###
+POST {{api}}/users
+Content-Type: application/json
+
+{
+    "nombre": "max",
+    "apellido": "narvaez",
+    "edad":30,
+    "rol": "admin",
+    "telefono":82181453,
+    "email": "maximo@gmail.com",
+    "password": "1dgfhhg4asd5"
+}
+
+###
+DELETE  {{api}}/user/64fff368c495c22893ce7c97
+
+###
+PUT {{api}}/user/64fff2afcd7c013ae7acb84b
+Content-Type: application/json
+
+{
+    "nombre": "Jorge",
+    "apellido": "narvaez",
+    "edad":30,
+    "rol": "admin",
+    "telefono":82181453,
+    "email": "maximo@gmail.com",
+    "password": "1dgfhhg4asd5"
+}
