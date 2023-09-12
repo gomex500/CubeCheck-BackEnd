@@ -1,6 +1,6 @@
 from flask import Flask
-from routes.user_routes import user_routes
-from configs.config import DEBUG, PORT
+from src.routes.user_routes import user_routes
+from src.configs.config import DEBUG, PORT
 
 app = Flask(__name__)
 app.register_blueprint(user_routes)

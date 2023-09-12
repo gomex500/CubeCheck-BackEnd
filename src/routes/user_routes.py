@@ -1,5 +1,5 @@
 from flask import Blueprint
-from controllers.user_controllers import (
+from src.controllers.user_controllers import (
     insertar_usuario,
     obtener_usuarios,
     obtener_usuario,
@@ -7,7 +7,7 @@ from controllers.user_controllers import (
     actualizar_usuario,
 )
 from pymongo import MongoClient
-from configs.config import MONGO_URI
+from src.configs.config import MONGO_URI
 
 user_routes = Blueprint('user_routes', __name__)
 

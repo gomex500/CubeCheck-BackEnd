@@ -1,7 +1,7 @@
 from datetime import datetime
 from flask import request, jsonify
 from bson import ObjectId
-from models.user_models import UserModel
+from src.models.user_models import UserModel
 
 def insertar_usuario(collections):
     id = collections.insert_one(UserModel(request.json)).inserted_id
