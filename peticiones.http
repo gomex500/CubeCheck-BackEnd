@@ -26,11 +26,11 @@ Content-Type: application/json
 DELETE  {{api}}/user/64fff368c495c22893ce7c97
 
 ###
-PUT {{api}}/user/64fff2afcd7c013ae7acb84b
+PUT {{api}}/user/64fff1cca1db83076138fa3e
 Content-Type: application/json
 
 {
-    "nombre": "Jorge",
+    "nombre": "max1",
     "apellido": "narvaez",
     "edad":30,
     "rol": "admin",
