@@ -17,7 +17,9 @@ def obtener_usuarios(collections):
 
 def obtener_usuario(collections, id):
     doc = collections.find_one({'_id': ObjectId(id)})
-    return jsonify(UserModel(doc).__dict__)
+    user_data = UserModel(doc).__dict__
+    user_data['_id'] = str(doc['_id'])
+    return jsonify(user_data)
 
 def eliminar_usuario(collections, id):
     collections.delete_one({'_id': ObjectId(id)})
