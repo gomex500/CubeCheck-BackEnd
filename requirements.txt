@@ -13,5 +13,5 @@ packaging==23.1
 pymongo==4.5.0
 python-decouple==3.8
 python-dotenv==0.21.1
-Werkzeug==2.3.7
+Werkzeug==2.2.3
 zipp==3.16.2
