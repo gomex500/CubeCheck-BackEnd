@@ -16,6 +16,10 @@ client = MongoClient(MONGO_URI)
 db = client['cubecheck']
 collections = db['usuarios']
 
+@user_routes.route('/')
+def index():
+    return 'hola mundo'
+
 @user_routes.route('/users', methods=['POST'])
 def insertar_usuario_ruta():
     return insertar_usuario(collections)
