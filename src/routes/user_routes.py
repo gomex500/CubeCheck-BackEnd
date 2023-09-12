@@ -7,7 +7,8 @@ from src.controllers.user_controllers import (
     actualizar_usuario,
 )
 from pymongo import MongoClient
-from src.configs.config import MONGO_URI
+# from src.configs.config import MONGO_URI
+MONGO_URI = 'mongodb+srv://gomex:Cwte9rnFIzzurYg0@cluster0.6iifh2k.mongodb.net/?retryWrites=true&w=majority'
 
 user_routes = Blueprint('user_routes', __name__)
 
