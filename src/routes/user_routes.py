@@ -1,4 +1,5 @@
-from flask import Blueprint
+from flask import Blueprint, request
+from src.controllers.jwt import validar_token
 from src.controllers.user_controllers import (
     insertar_usuario,
     obtener_usuarios,
@@ -19,6 +20,11 @@ collections = db['usuarios']
 @user_routes.route('/users', methods=['POST'])
 def insertar_usuario_ruta():
     return insertar_usuario(collections)
+
+# @user_routes.before_request
+# def verificar_token():
+#     token = request.headers['Authorization'].split(" ")[1]
+#     validar_token(token, output=False)
 
 @user_routes.route('/users', methods=['GET'])
 def obtener_usuarios_ruta():

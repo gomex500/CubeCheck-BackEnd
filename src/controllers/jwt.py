@@ -12,7 +12,7 @@ def expiracion_token(days: int):
 
 def crear_token(data: dict):
     token = encode(payload={**data, 'exp':expiracion_token(2)}, key=SECRET_KEY, algorithm="HS256")
-    return token.encode('UTF-8')
+    return token.encode('utf-8')
 
 def validar_token(token, output=False):
     try:

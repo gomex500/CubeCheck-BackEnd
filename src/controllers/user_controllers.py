@@ -1,13 +1,16 @@
 from datetime import datetime
-import imp
 from flask import request, jsonify
 from bson import ObjectId
 from src.models.user_models import UserModel
-from .jwt import crear_token
+from src.controllers.jwt import crear_token
+import json
 
 def insertar_usuario(collections):
-    id = collections.insert_one(UserModel(request.json)).inserted_id
-    return jsonify(str(id))
+    data = json.loads(request.data)
+    user_instance = UserModel(data)
+    id = collections.insert_one(user_instance.__dict__).inserted_id
+    token = crear_token(data=request.json)
+    return jsonify({'id':str(id), "token":token.decode('utf-8')})
 
 def obtener_usuarios(collections):
     users = []
@@ -34,3 +37,4 @@ def actualizar_usuario(collections, id):
     user_data_update.update_at = datetime.now()
     collections.update_one({'_id': ObjectId(id)}, {"$set": user_data_update.__dict__})
     return jsonify({'message': 'Usuario actualizado'})
+
