@@ -5,3 +5,4 @@ from decouple import config
 DEBUG = config('DEBUG', default=False, cast=bool)
 PORT = config('PORT', default=5000, cast=int)
 MONGO_URI = config('MONGO_URI')
+SECRET_KEY = config('SECRET_KEY')
