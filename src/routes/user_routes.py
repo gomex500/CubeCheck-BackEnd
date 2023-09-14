@@ -12,15 +12,6 @@ from src.controllers.user_controllers import (
 #inicializando rutas de usuario
 user_routes = Blueprint('user_routes', __name__)
 
-# #validacion de token
-# @user_routes.before_request
-# def verificar_token():
-#     try:
-#         token = request.headers['Authorization'].split(" ")[1]
-#         validar_token(token, output=False)
-#     except:
-#         return jsonify({"Menssage":"Error de autenticacion, no estas autorizado"})
-
 
 #ruta crear usuario
 @user_routes.route('/users', methods=['POST'])
