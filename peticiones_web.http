@@ -1,0 +1,18 @@
+@api = https://cubecheck.onrender.com/
+
+GET {{api}}/token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJwcnVlYmExIiwiYXBlbGxpZG8iOiJuYXJ2YWV6IiwiZWRhZCI6MzAsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6Im1heGltb0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFkZ2ZoaGc0YXNkNSIsImV4cCI6MTY5NDc1MDk0OH0.PccEAlu5LAynElmdVgwRmTfyLCi6o6BEwbu3cz8w6BY
+
+####
+POST {{api}}/users
+Content-Type: application/json
+
+{
+    "nombre": "prueba1",
+    "apellido": "narvaez",
+    "edad":30,
+    "rol": "admin",
+    "telefono":82181453,
+    "email": "maximo@gmail.com",
+    "password": "1dgfhhg4asd5"
+}
