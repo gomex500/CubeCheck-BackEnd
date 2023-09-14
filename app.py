@@ -1,11 +1,13 @@
 from flask import Flask
 from src.routes.user_routes import user_routes
+from src.routes.login_routes import login_routes
 from src.routes.home import home
 from src.configs.config import DEBUG, PORT
 
 app = Flask(__name__)
 app.register_blueprint(user_routes)
 app.register_blueprint(home)
+app.register_blueprint(login_routes)
 
 if __name__ == '__main__':
     app.run(debug=DEBUG, port=PORT)

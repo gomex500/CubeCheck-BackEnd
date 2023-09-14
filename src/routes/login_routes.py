@@ -1,8 +1,13 @@
-from crypt import methods
 from flask import Blueprint
+from src.configs.conecction import collections
+from src.controllers.login_controllers import signin
 
-login = Blueprint('login', __name__)
+login_routes = Blueprint('login_routes', __name__)
 
-@login.route('/login', methods=['POST'])
+@login_routes.route('/login', methods=['POST'])
 def login():
     pass
+
+@login_routes.route('/signin', methods=['POST'])
+def signin_route():
+    return signin(collections('usuarios'))

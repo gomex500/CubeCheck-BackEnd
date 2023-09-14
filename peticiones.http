@@ -15,21 +15,20 @@ GET {{api}}/token
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJwcnVlYmExIiwiYXBlbGxpZG8iOiJuYXJ2YWV6IiwiZWRhZCI6MzAsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6Im1heGltb0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFkZ2ZoaGc0YXNkNSIsImV4cCI6MTY5NDcyNjc3OH0.-oCKObfcYItqDY-JooGXILzWMqdO4fzR4eF74aQVPDo
 
 ###
-POST {{api}}/users
+POST {{api}}/signin
 Content-Type: application/json
 
 {
     "nombre": "prueba1",
     "apellido": "narvaez",
     "edad":30,
-    "rol": "admin",
     "telefono":82181453,
     "email": "maximo@gmail.com",
     "password": "1dgfhhg4asd5"
 }
 
 ###
-DELETE  {{api}}/user/650127dcc14eb29424195f89
+DELETE  {{api}}/user/65012bd948a0a9f1fe2a20d6
 
 ###
 PUT {{api}}/user/65012716086a73f5a8a320d3
