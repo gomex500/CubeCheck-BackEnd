@@ -1,5 +1,6 @@
 from datetime import datetime
 
+#modelo de objeto usuario
 class UserModel:
     def __init__(self, data):
         self.nombre = data.get('nombre', '')
