@@ -12,11 +12,7 @@ from src.controllers.user_controllers import (
 #inicializando rutas de usuario
 user_routes = Blueprint('user_routes', __name__)
 
-#ruta crear usuario
-@user_routes.route('/users', methods=['POST'])
-def insertar_usuario_ruta():
-    return insertar_usuario(collections('usuarios'))
-
+#validacion de token
 @user_routes.before_request
 def verificar_token():
     try:
@@ -24,6 +20,12 @@ def verificar_token():
         validar_token(token, output=False)
     except:
         return jsonify({"Menssage":"Error de autenticacion, no estas autorizado"})
+
+
+#ruta crear usuario
+@user_routes.route('/users', methods=['POST'])
+def insertar_usuario_ruta():
+    return insertar_usuario(collections('usuarios'))
 
 #ruta mostrar usuarios
 @user_routes.route('/users', methods=['GET'])

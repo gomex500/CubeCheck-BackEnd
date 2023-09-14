@@ -11,7 +11,6 @@ def validacion_email(coll, email):
         return True
     return False
 
-
 #validar si el password existe
 def validar_password(coll, password):
     passEncriptado = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
@@ -45,6 +44,7 @@ def signin(collections):
             "nombre": user_instance.nombre,
             "apellido": user_instance.apellido,
             "edad": user_instance.edad,
+            "rol":user_instance.rol,
             "telefono": user_instance.telefono,
             "email": user_instance.email,
             "password": user_instance.password
@@ -75,6 +75,7 @@ def login(collections):
             "nombre": user_doc['nombre'],
             "apellido": user_doc['apellido'],
             "edad": user_doc['edad'],
+            "rol":user_instance.rol,
             "telefono": user_doc['telefono'],
             "email": user_doc['email'],
             "password": user_doc['password']
