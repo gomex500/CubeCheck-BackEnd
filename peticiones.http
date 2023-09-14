@@ -4,15 +4,15 @@ GET {{api}}
 
 ###
 GET {{api}}/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
 ###
 GET {{api}}/user/6502849426f0c774cb3a586d
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
 ###
 GET {{api}}/token
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
 ###registro
 POST {{api}}/signin
@@ -33,28 +33,41 @@ POST {{api}}/login
 Content-Type: application/json
 
 {
-    "email": "jn174356@gmail.com",
-    "password": "jorgeN@200"
+    "email": "max@gmail.com",
+    "password": "FREDDYGOMEZ@500"
 }
 
 
-###
-DELETE  {{api}}/user/65027ef41ef9e95491aef476
-
-###
-PUT {{api}}/user/65012716086a73f5a8a320d3
+###inhresar
+POST {{api}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 Content-Type: application/json
 
 {
-    "nombre": "max1244",
-    "apellido": "narvaez",
-    "edad":30,
+    "nombre": "Freddy",
+    "apellido": "Gomez",
+    "edad":25,
     "rol": "admin",
     "telefono":82181453,
-    "email": "maximo@gmail.com",
-    "password": "1dgfhhg4asd5"
+    "email": "max@gmail.com",
+    "password": "FREDDYGOMEZ@500"
 }
 
+###
+DELETE  {{api}}/user/6502849426f0c774cb3a586d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
-##my token
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
+###
+PUT {{api}}/user/65028ef9b2c1c36236870402
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
+Content-Type: application/json
+
+{
+    "nombre": "max",
+    "apellido": "steel",
+    "edad":30,
+    "rol": "user",
+    "telefono":82181453,
+    "email": "maxq@gmail.com",
+    "password": "max234"
+}

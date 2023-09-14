@@ -89,10 +89,19 @@ def actualizar_usuario(collections, id):
     try:
         user_data = collections.find_one({'_id': ObjectId(id)})
         user_data_update = UserModel(request.json)
+
+        #encriptando password
+        password = user_data_update.password.encode('utf-8')
+        salt = bcrypt.gensalt()
+        passEncriptado = bcrypt.hashpw(password, salt)
+
+        #insertando datos sencibles
         user_data_update.create_at = user_data['create_at']
         user_data_update.update_at = datetime.now()
+        user_data_update.password = passEncriptado.decode('utf-8')
+
         collections.update_one({'_id': ObjectId(id)}, {"$set": user_data_update.__dict__})
-        return jsonify({'message': 'Usuario actualizado'})
+        return jsonify({"message": "usuario actualizado"})
     except:
         response = jsonify({"menssage","error de peticion"})
         response.status = 401
