@@ -12,9 +12,9 @@ GET {{api}}/user/650273358f9fdc86e0c4db41
 
 ###
 GET {{api}}/token
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21lemZyZWRkeTg4NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IkZSRUREWUdPTUVaQDUwMCIsImV4cCI6MTY5NDgxMDU4Mn0.zLJCVNnImipPD3lSk16kOcP1uD5CRG0U2KKhvbaPok8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJKb3JnZSIsImFwZWxsaWRvIjoiTmFydmFleiIsImVkYWQiOjIzLCJ0ZWxlZm9ubyI6ODIxODE0NTMsImVtYWlsIjoiam4xNzQzNTZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkeG9xV2FibU1va0c0S0dibk0vYWt1T2pJYndYTjhyQW83U2ZLbjNyZDlMVXNKVENXZ1ZuMEciLCJleHAiOjE2OTQ4MTQ2NjJ9._o5x0hRvDXMY-OkvFbcTj1-s6hassd9S9TYLcH810f4
 
-###
+###registro
 POST {{api}}/signin
 Content-Type: application/json
 
@@ -23,9 +23,19 @@ Content-Type: application/json
     "apellido": "Narvaez",
     "edad":23,
     "telefono":82181453,
+    "email": "max2@gmail.com",
+    "password": "jorgeN@200"
+}
+
+###logeo
+POST {{api}}/login
+Content-Type: application/json
+
+{
     "email": "jn174356@gmail.com",
     "password": "jorgeN@200"
 }
+
 
 ###
 DELETE  {{api}}/user/650267ff2d8e5f7efe6bb815
