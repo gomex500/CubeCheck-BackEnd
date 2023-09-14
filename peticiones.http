@@ -4,27 +4,28 @@ GET {{api}}
 
 ###
 GET {{api}}/users
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJwcnVlYmExIiwiYXBlbGxpZG8iOiJuYXJ2YWV6IiwiZWRhZCI6MzAsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6Im1heGltb0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjFkZ2ZoaGc0YXNkNSIsImV4cCI6MTY5NDcyNjc3OH0.-oCKObfcYItqDY-JooGXILzWMqdO4fzR4eF74aQVPDo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
 
 ###
-GET {{api}}/user/650273358f9fdc86e0c4db41
-
+GET {{api}}/user/6502849426f0c774cb3a586d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
 
 ###
 GET {{api}}/token
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJKb3JnZSIsImFwZWxsaWRvIjoiTmFydmFleiIsImVkYWQiOjIzLCJ0ZWxlZm9ubyI6ODIxODE0NTMsImVtYWlsIjoiam4xNzQzNTZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkeG9xV2FibU1va0c0S0dibk0vYWt1T2pJYndYTjhyQW83U2ZLbjNyZDlMVXNKVENXZ1ZuMEciLCJleHAiOjE2OTQ4MTQ2NjJ9._o5x0hRvDXMY-OkvFbcTj1-s6hassd9S9TYLcH810f4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ
 
 ###registro
 POST {{api}}/signin
 Content-Type: application/json
 
 {
-    "nombre": "Jorge",
-    "apellido": "Narvaez",
-    "edad":23,
+    "nombre": "Freddy",
+    "apellido": "Gomez",
+    "edad":25,
+    "rol": "admin",
     "telefono":82181453,
-    "email": "max2@gmail.com",
-    "password": "jorgeN@200"
+    "email": "gomex6798@gmail.com",
+    "password": "FREDDYGOMEZ@500"
 }
 
 ###logeo
@@ -38,7 +39,7 @@ Content-Type: application/json
 
 
 ###
-DELETE  {{api}}/user/650267ff2d8e5f7efe6bb815
+DELETE  {{api}}/user/65027ef41ef9e95491aef476
 
 ###
 PUT {{api}}/user/65012716086a73f5a8a320d3
@@ -53,3 +54,7 @@ Content-Type: application/json
     "email": "maximo@gmail.com",
     "password": "1dgfhhg4asd5"
 }
+
+
+##my token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInRlbGVmb25vIjo4MjE4MTQ1MywiZW1haWwiOiJnb21leDY3OThAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkYkRWeGJzUmMwY2lHakZya1ZTZEc4ZXR3LnRIQ0lFdU54VlVEZG5rSDI4bEI3THZDZ21QSU8iLCJleHAiOjE2OTQ4MTUwMjl9.BZi7ZdUbExT2t1N_4bBl8EW8TZLjiM5-_mg3wznKBaQ

@@ -1,5 +1,5 @@
-from flask import Blueprint, request
-# from src.controllers.jwt import validar_token
+from flask import Blueprint, request, jsonify
+from src.controllers.jwt import validar_token
 from src.configs.conecction import collections
 from src.controllers.user_controllers import (
     insertar_usuario,
@@ -17,10 +17,13 @@ user_routes = Blueprint('user_routes', __name__)
 def insertar_usuario_ruta():
     return insertar_usuario(collections('usuarios'))
 
-# @user_routes.before_request
-# def verificar_token():
-#     token = request.headers['Authorization'].split(" ")[1]
-#     validar_token(token, output=False)
+@user_routes.before_request
+def verificar_token():
+    try:
+        token = request.headers['Authorization'].split(" ")[1]
+        validar_token(token, output=False)
+    except:
+        return jsonify({"Menssage":"Error de autenticacion, no estas autorizado"})
 
 #ruta mostrar usuarios
 @user_routes.route('/users', methods=['GET'])
