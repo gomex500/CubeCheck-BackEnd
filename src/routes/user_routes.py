@@ -3,6 +3,7 @@ from src.controllers.jwt import validar_token
 from src.configs.conecction import collections
 from src.controllers.user_controllers import (
     insertar_usuario,
+    obtener_email,
     obtener_usuarios,
     obtener_usuario,
     eliminar_usuario,
@@ -36,6 +37,11 @@ def obtener_usuarios_ruta():
 @user_routes.route('/user/<id>', methods=['GET'])
 def obtener_usuario_ruta(id):
     return obtener_usuario(collections('usuarios'), id)
+
+#ruta mostrar usuario por el correo
+@user_routes.route('/email/<email>', methods=['GET'])
+def obtener_email_ruta(email):
+    return obtener_email(collections('usuarios'), email)
 
 #ruta eliminar usuario
 @user_routes.route('/user/<id>', methods=['DELETE'])

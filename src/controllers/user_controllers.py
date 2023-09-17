@@ -37,6 +37,7 @@ def insertar_usuario(collections):
             "nombre": user_instance.nombre,
             "apellido": user_instance.apellido,
             "edad": user_instance.edad,
+            "rol":user_instance.rol,
             "telefono": user_instance.telefono,
             "email": user_instance.email,
             "password": user_instance.password
@@ -44,7 +45,7 @@ def insertar_usuario(collections):
         token = crear_token(data=user_data)
         return jsonify({'id':str(id), "token":token.decode('utf-8')})
     except:
-        response = jsonify({"menssage","error de registro"})
+        response = jsonify({"menssage":"error de registro"})
         response.status = 400
         return response
 
@@ -58,7 +59,7 @@ def obtener_usuarios(collections):
             users.append(user)
         return jsonify(users)
     except:
-        response = jsonify({"menssage","error de peticion"})
+        response = jsonify({"menssage":"error de peticion"})
         response.status = 401
         return response
 
@@ -70,8 +71,25 @@ def obtener_usuario(collections, id):
         user_data['_id'] = str(doc['_id'])
         return jsonify(user_data)
     except:
-        response = jsonify({"menssage","error de peticion"})
+        response = jsonify({"menssage":"error de peticion"})
         response.status = 401
+        return response
+
+#controlador mostrar usuario por email
+def obtener_email(collections, email):
+    try:
+        doc = collections.find_one({'email': email})
+        if doc:
+            user_data = UserModel(doc).__dict__
+            user_data['_id'] = str(doc['_id'])
+            return jsonify(user_data)
+        else:
+            response = jsonify({"message": "Correo no existe"})
+            response.status_code = 404
+            return response
+    except Exception as e:
+        response = jsonify({"message": "Error al buscar usuario por correo", "error": str(e)})
+        response.status_code = 500
         return response
 
 #controlador eliminar usuario
@@ -80,7 +98,7 @@ def eliminar_usuario(collections, id):
         collections.delete_one({'_id': ObjectId(id)})
         return jsonify({'mensaje': 'Usuario eliminado'})
     except:
-        response = jsonify({"menssage","error de peticion"})
+        response = jsonify({"menssage":"error de peticion"})
         response.status = 401
         return response
 
@@ -103,6 +121,6 @@ def actualizar_usuario(collections, id):
         collections.update_one({'_id': ObjectId(id)}, {"$set": user_data_update.__dict__})
         return jsonify({"message": "usuario actualizado"})
     except:
-        response = jsonify({"menssage","error de peticion"})
+        response = jsonify({"menssage":"error de peticion"})
         response.status = 401
         return response
