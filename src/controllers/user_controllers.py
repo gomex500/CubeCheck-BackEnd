@@ -124,3 +124,18 @@ def actualizar_usuario(collections, id):
         response = jsonify({"menssage":"error de peticion"})
         response.status = 401
         return response
+
+# Controlador para actualizar el rol de un usuario
+def actualizar_rol(collections, id):
+    try:
+        nuevo_rol = request.json.get('rol')
+        print(request.json.get('rol'))
+        roles_validos = ['admin', 'user']
+        if nuevo_rol not in roles_validos:
+            return jsonify({'message': 'Rol no válido'}), 400
+
+        collections.update_one({'_id': ObjectId(id)}, {'$set': {'rol': nuevo_rol}})
+        return jsonify({'message': 'Rol actualizado correctamente'}), 200
+
+    except Exception as e:
+        return jsonify({'message': 'Error al actualizar el rol', 'error': str(e)}), 500

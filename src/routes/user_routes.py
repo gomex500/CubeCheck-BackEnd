@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from src.controllers.jwt import validar_token
 from src.configs.conecction import collections
 from src.controllers.user_controllers import (
+    actualizar_rol,
     insertar_usuario,
     obtener_email,
     obtener_usuarios,
@@ -52,3 +53,8 @@ def eliminar_usuario_ruta(id):
 @user_routes.route('/user/<id>', methods=['PUT'])
 def actualizar_usuario_ruta(id):
     return actualizar_usuario(collections('usuarios'), id)
+
+#ruta actualizar rol de usuario
+@user_routes.route('/rol/<id>', methods=['PUT'])
+def actualizar_rol_ruta(id):
+    return actualizar_rol(collections('usuarios'), id)
