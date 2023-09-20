@@ -139,3 +139,18 @@ def actualizar_rol(collections, id):
 
     except Exception as e:
         return jsonify({'message': 'Error al actualizar el rol', 'error': str(e)}), 500
+
+
+# Controlador para actualizar datos basicos de usuario
+def actualizar_userb(collections, id):
+    try:
+        nuevos_datos = request.json
+        campos_requeridos = ['nombre', 'apellido', 'edad', 'telefono']
+        for campo in campos_requeridos:
+            if campo not in nuevos_datos:
+                return jsonify({'message': f'Campo {campo} faltante en la solicitud'}), 400
+
+        collections.update_one({'_id': ObjectId(id)}, {'$set': nuevos_datos})
+        return jsonify({'message': 'Datos actualizados correctamente'}), 200
+    except Exception as e:
+        return jsonify({'message': 'Error al actualizar los datos', 'error': str(e)}), 500

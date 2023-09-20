@@ -7,7 +7,7 @@ home = Blueprint('home', __name__)
 #ruta inicial
 @home.route('/')
 def index():
-    return 'hola mundo'
+    return '<h1>welcome to api CubeCheck</h1>'
 
 #ruta verificadora de token
 @home.route('/token')

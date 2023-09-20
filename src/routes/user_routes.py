@@ -9,6 +9,7 @@ from src.controllers.user_controllers import (
     obtener_usuario,
     eliminar_usuario,
     actualizar_usuario,
+    actualizar_userb
 )
 
 #inicializando rutas de usuario
@@ -58,3 +59,8 @@ def actualizar_usuario_ruta(id):
 @user_routes.route('/rol/<id>', methods=['PUT'])
 def actualizar_rol_ruta(id):
     return actualizar_rol(collections('usuarios'), id)
+
+#ruta actualizar usuario sin password
+@user_routes.route('/userb/<id>', methods=['PUT'])
+def actualizar_userb_ruta(id):
+    return actualizar_userb(collections('usuarios'), id)

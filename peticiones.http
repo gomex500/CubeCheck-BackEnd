@@ -85,3 +85,15 @@ Content-Type: application/json
 {
     "rol": "user"
 }
+
+###
+PUT  {{api}}/userb/65028ef9b2c1c36236870402
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
+Content-Type: application/json
+
+{
+    "nombre": "max",
+    "apellido": "steel",
+    "edad":30,
+    "telefono":82181453
+}
