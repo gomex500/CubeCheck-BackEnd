@@ -56,11 +56,14 @@ def obtener_usuarios(collections):
         for doc in collections.find():
             user = UserModel(doc).__dict__
             user['_id'] = str(doc['_id'])
+            # Evitar agregar la contraseña a la lista de usuarios
+            user.pop('password', None)
             users.append(user)
+
         return jsonify(users)
-    except:
-        response = jsonify({"menssage":"error de peticion"})
-        response.status = 401
+    except Exception as e:
+        response = jsonify({"message": "Error de petición", "error": str(e)})
+        response.status_code = 500
         return response
 
 #controlador mostrar usuario
@@ -154,3 +157,30 @@ def actualizar_userb(collections, id):
         return jsonify({'message': 'Datos actualizados correctamente'}), 200
     except Exception as e:
         return jsonify({'message': 'Error al actualizar los datos', 'error': str(e)}), 500
+
+
+# Controlador para actualizar password
+def actualizar_password(collections, id):
+    try:
+        nuevos_datos = request.json
+        # Asegúrate de que los campos requeridos estén presentes en la solicitud
+        campos_requeridos = ['password', 'newPassword']
+        for campo in campos_requeridos:
+            if campo not in nuevos_datos:
+                return jsonify({'message': f'Campo {campo} faltante en la solicitud'}), 400
+        # Obtén el documento del usuario de la base de datos
+        user_doc = collections.find_one({'_id': ObjectId(id)})
+        passw = user_doc['password']
+        # Verifica si el usuario existe
+        if user_doc is None:
+            return jsonify({'message': 'Usuario no encontrado'}), 404
+        # Codifica la contraseña anterior y verifica si coincide
+        if not bcrypt.checkpw(nuevos_datos['password'].encode('utf-8'), user_doc['password']):
+            return jsonify({'message': 'La contraseña anterior no es válida'}), 401
+        # Codifica la nueva contraseña y actualiza en la base de datos
+        nueva_contrasena = bcrypt.hashpw(nuevos_datos['newPassword'].encode('utf-8'), bcrypt.gensalt())
+        collections.update_one({'_id': ObjectId(id)}, {'$set': {'password': nueva_contrasena}})
+        return jsonify({'message': 'Contraseña actualizada correctamente'}), 200
+
+    except Exception as e:
+        return jsonify({'message': 'Error al actualizar la contraseña', 'error': str(e)}), 500
