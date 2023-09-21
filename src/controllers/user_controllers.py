@@ -170,7 +170,6 @@ def actualizar_password(collections, id):
                 return jsonify({'message': f'Campo {campo} faltante en la solicitud'}), 400
         # Obtén el documento del usuario de la base de datos
         user_doc = collections.find_one({'_id': ObjectId(id)})
-        passw = user_doc['password']
         # Verifica si el usuario existe
         if user_doc is None:
             return jsonify({'message': 'Usuario no encontrado'}), 404
@@ -179,7 +178,7 @@ def actualizar_password(collections, id):
             return jsonify({'message': 'La contraseña anterior no es válida'}), 401
         # Codifica la nueva contraseña y actualiza en la base de datos
         nueva_contrasena = bcrypt.hashpw(nuevos_datos['newPassword'].encode('utf-8'), bcrypt.gensalt())
-        collections.update_one({'_id': ObjectId(id)}, {'$set': {'password': nueva_contrasena}})
+        collections.update_one({'_id': ObjectId(id)}, {'$set': {'password': nueva_contrasena.decode('utf-8')}})
         return jsonify({'message': 'Contraseña actualizada correctamente'}), 200
 
     except Exception as e:

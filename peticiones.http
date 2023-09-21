@@ -103,6 +103,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZ
 Content-Type: application/json
 
 {
-    "password":"12345678",
+    "password":"max6798@56",
     "newPassword":"max6798@56"
 }
