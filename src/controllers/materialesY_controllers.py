@@ -1,14 +1,14 @@
 from datetime import datetime
 from flask import request, jsonify
 from bson import ObjectId
-from src.models.materialesX_model import MateXModel
+from src.models.materialesY_model import MateYModel
 import json
 
-#controlador insertar Material x
-def insertar_materialX(collections):
+#controlador insertar Material y
+def insertar_materialY(collections):
     try:
         data = json.loads(request.data)
-        mate_instance = MateXModel(data)
+        mate_instance = MateYModel(data)
         id = collections.insert_one(mate_instance.__dict__).inserted_id
         return jsonify({'id':str(id)})
     except Exception as e:
@@ -16,12 +16,12 @@ def insertar_materialX(collections):
         response.status_code = 500
         return response
 
-#controlador mostrar materiales x
-def obtener_materialX(collections):
+#controlador mostrar materiales y
+def obtener_materialY(collections):
     try:
         materiales = []
         for doc in collections.find():
-            material = MateXModel(doc).__dict__
+            material = MateYModel(doc).__dict__
             material['_id'] = str(doc['_id'])
             materiales.append(material)
         return jsonify(materiales)
@@ -34,7 +34,7 @@ def obtener_materialX(collections):
 def obtener_material(collections, id):
     try:
         doc = collections.find_one({'_id': ObjectId(id)})
-        mate_data = MateXModel(doc).__dict__
+        mate_data = MateYModel(doc).__dict__
         mate_data['_id'] = str(doc['_id'])
         return jsonify(mate_data)
     except:
@@ -42,8 +42,8 @@ def obtener_material(collections, id):
         response.status = 401
         return response
 
-#controlador eliminar usuario
-def eliminar_materialx(collections, id):
+#controlador eliminar material y
+def eliminar_materialY(collections, id):
     try:
         collections.delete_one({'_id': ObjectId(id)})
         return jsonify({'mensaje': 'Material eliminado'})
@@ -52,11 +52,11 @@ def eliminar_materialx(collections, id):
         response.status = 401
         return response
 
-#controlador actualizar material
-def actualizar_materialx(collections, id):
+#controlador actualizar material y
+def actualizar_materialY(collections, id):
     try:
         mate_data = collections.find_one({'_id': ObjectId(id)})
-        mate_data_update = MateXModel(request.json)
+        mate_data_update = MateYModel(request.json)
 
         #insertando datos sencibles
         mate_data_update.create_at = mate_data['create_at']

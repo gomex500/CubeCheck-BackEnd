@@ -1,9 +1,10 @@
 from datetime import datetime
 
 #modelo de objeto Material X
-class MateXModel:
+class MateYModel:
     def __init__(self, data):
         self.nombre = data.get('nombre', '')
+        self.tipo = data.get('tipo', '')
         self.x = data.get('x', 0)
         self.y = data.get('y', 0)
         self.z = data.get('z', 0)

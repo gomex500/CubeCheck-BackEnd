@@ -142,3 +142,39 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZ
     "cantidad": 1,
     "precio": 200
 }
+
+###ingresar materiales y
+POST {{api}}/materialy
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+{
+    "nombre": "nose",
+    "tipo": "Piedra",
+    "x": 12,
+    "y":10,
+    "z": 20,
+    "precio": 80
+}
+
+###obtener los materiales y
+GET {{api}}/materialy
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+###eliminar material y
+DELETE  {{api}}/materialy/6530a60970786cffc3dd6290
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+###actualizar materiales y
+PUT {{api}}/materialy/6530a60970786cffc3dd6290
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+{
+    "nombre": "tierra",
+    "tipo": "Ladrillo",
+    "x": 12,
+    "y":10,
+    "z": 20,
+    "precio": 100
+}
