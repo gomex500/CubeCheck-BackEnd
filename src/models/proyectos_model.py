@@ -7,4 +7,4 @@ class ProyectoModel:
         self.presupuesto = data.get('presupuesto', 0.0)
         self.create_at = data.get('create_at', datetime.now())
         self.update_at = data.get('update_at', datetime.now())
-        self.contruccion = data.get('contruccion', {})
+        self.construccion = data.get('construccion', {})
