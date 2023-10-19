@@ -2,33 +2,33 @@
 
 GET {{api}}
 
-###
+###obtener los usuarios
 GET {{api}}/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6InVzZXIiLCJ0ZWxlZm9ubyI6ODIxODE0NTMsImVtYWlsIjoiZ29tZXg2Nzk4QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJENiRmh5UGNOY2NHaWd3R3JjTWJHWC54LnRIVDNlckVEcXZPMThZRVI5czhpNE91c0xEWm1hIiwiZXhwIjoxNjk1NDEwODExfQ.xjGdkJelwR2bQ5P0Ia93uOK2iobUdhE5n5Z08PxBAx8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
 
-###
-GET {{api}}/user/650371eaef2cb94cbb8b648d
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6InVzZXIiLCJ0ZWxlZm9ubyI6ODIxODE0NTMsImVtYWlsIjoiZ29tZXg2Nzk4QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJENiRmh5UGNOY2NHaWd3R3JjTWJHWC54LnRIVDNlckVEcXZPMThZRVI5czhpNE91c0xEWm1hIiwiZXhwIjoxNjk1NDEwODExfQ.xjGdkJelwR2bQ5P0Ia93uOK2iobUdhE5n5Z08PxBAx8
+###obtener usuario por id
+GET {{api}}/user/650fc89d295fd7e51355cad0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJKdWFuIiwiYXBlbGxpZG8iOiJKaW1lbmV6IiwiZWRhZCI6MzIsInJvbCI6InVzZXIiLCJ0ZWxlZm9ubyI6NzgzNDg5MjMsImVtYWlsIjoianVhbmptMTJAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkRFRwNDRUVlJzZVI2TzNFZnpLejZXdUN6SUpXc1FsNzc4UjhtdWlhOFMvSFZGaDNHd3c5aGEiLCJleHAiOjE2OTU2ODQ0MTN9.Nn2zctLiYCUXD9qzU11TKezhy_GbvkF5svEDSUTlX8g
 
-###
+###ver token
 GET {{api}}/token
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6InVzZXIiLCJ0ZWxlZm9ubyI6ODIxODE0NTMsImVtYWlsIjoiZ29tZXg2Nzk4QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJENiRmh5UGNOY2NHaWd3R3JjTWJHWC54LnRIVDNlckVEcXZPMThZRVI5czhpNE91c0xEWm1hIiwiZXhwIjoxNjk1NDEwODExfQ.xjGdkJelwR2bQ5P0Ia93uOK2iobUdhE5n5Z08PxBAx8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwNDI4MH0.36r4Q8GyicwSMz-Jfx4ISFEj9O1jVhVkLJFLGAHU63w
 
-###registro
+
+###registro de usuario
 POST {{api}}/signin
 Content-Type: application/json
 
 {
-    "nombre": "Eduardo",
-    "apellido": "Gomez",
-    "edad":22,
-    "rol": "user",
-    "telefono":82090064,
-    "email": "eg98601@gmail.com",
-    "password": "gg05022020"
+    "nombre": "Juan",
+    "apellido": "Jimenez",
+    "edad":32,
+    "telefono":78348923,
+    "email": "juanjm12@gmail.com",
+    "password": "JuanJm1"
 }
 
-###logeo
+###logeo de usuarios
 POST {{api}}/login
 Content-Type: application/json
 
@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 
 
-###inhresar
+###ingresar usuarios
 POST {{api}}/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 Content-Type: application/json
@@ -53,11 +53,11 @@ Content-Type: application/json
     "password": "FREDDYGOMEZ@500"
 }
 
-###
+###eliminar usuarios
 DELETE  {{api}}/user/65054369eb32259acceff080
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
-###
+###actulizar usuario x id
 PUT {{api}}/user/65028ef9b2c1c36236870402
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 Content-Type: application/json
@@ -73,11 +73,11 @@ Content-Type: application/json
 }
 
 
-###
+###buscar usuario x gmail
 GET {{api}}/email/gomex6798@gmail.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
-###
+###actualizar rol del usuario
 PUT  {{api}}/rol/65028e57b2c1c36236870401
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 Content-Type: application/json
@@ -86,7 +86,7 @@ Content-Type: application/json
     "rol": "admin"
 }
 
-###
+###actualizar algunos datos del usuario
 PUT  {{api}}/userb/65028ef9b2c1c36236870402
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 Content-Type: application/json
@@ -97,7 +97,7 @@ Content-Type: application/json
     "edad":27,
     "telefono":82181453
 }
-###
+###actalizar password del usuario
 PUT  {{api}}/userp/65028ef9b2c1c36236870402
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 Content-Type: application/json
@@ -106,3 +106,21 @@ Content-Type: application/json
     "password":"max6798@56",
     "newPassword":"max6798@56"
 }
+
+###ingresar materiales x
+POST {{api}}/materialx
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+{
+    "nombre": "Holcin",
+    "marca": "Holcin",
+    "tipo": "Cemento",
+    "medida":"Kg",
+    "cantidad": 1,
+    "precio": 100
+}
+
+###obtener los materiales x
+GET {{api}}/materialx
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
