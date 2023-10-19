@@ -124,3 +124,21 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZ
 ###obtener los materiales x
 GET {{api}}/materialx
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+###eliminar material
+DELETE  {{api}}/materialx/65309d31fd08deb3025c966e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+###actualizar materiales x
+PUT {{api}}/materialx/65309d2cfd08deb3025c966d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NzcwODI3MH0.l3FzJNo19HlJ2naXDr9UdOl_N5aUkRsF3IOrRijdcZ4
+
+{
+    "nombre": "Holcin",
+    "marca": "Holcin",
+    "tipo": "Cemento",
+    "medida":"Kg",
+    "cantidad": 1,
+    "precio": 200
+}

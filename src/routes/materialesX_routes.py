@@ -3,7 +3,10 @@ from src.controllers.jwt import validar_token
 from src.configs.conecction import collections
 from src.controllers.materialesX_controllers import (
     insertar_materialX,
-    obtener_materialX
+    obtener_materialX,
+    obtener_material,
+    eliminar_materialx,
+    actualizar_materialx
     )
 
 #inicializando rutas de usuario
@@ -27,3 +30,18 @@ def insertar_materialx_ruta():
 @materialx_routes.route('/materialx', methods=['GET'])
 def obtener_materialx_ruta():
     return obtener_materialX(collections('materiales_x'))
+
+#ruta mostrar usuario
+@materialx_routes.route('/materialx/<id>', methods=['GET'])
+def obtener_material_ruta(id):
+    return obtener_material(collections('materiales_x'), id)
+
+#ruta eliminar usuario
+@materialx_routes.route('/materialx/<id>', methods=['DELETE'])
+def eliminar_materialx_ruta(id):
+    return eliminar_materialx(collections('materiales_x'), id)
+
+#ruta actualizar usuario
+@materialx_routes.route('/materialx/<id>', methods=['PUT'])
+def actualizar_materialx_ruta(id):
+    return actualizar_materialx(collections('materiales_x'), id)
