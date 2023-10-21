@@ -1,5 +1,3 @@
-from ctypes import cast
-from email.policy import default
 from decouple import config
 
 #configurando variables de entorno

@@ -65,8 +65,3 @@ def actualizar_rol_ruta(id):
 @user_routes.route('/userb/<id>', methods=['PUT'])
 def actualizar_userb_ruta(id):
     return actualizar_userb(collections('usuarios'), id)
-
-#ruta actualizar password
-@user_routes.route('/userp/<id>', methods=['PUT'])
-def actualizar_password_ruta(id):
-    return actualizar_password(collections('usuarios'), id)
