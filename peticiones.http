@@ -241,7 +241,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZ
     }
 }
 
-####
+####calcular pared
 POST {{api}}/calculoPared
 Content-Type: application/json
 
@@ -249,4 +249,14 @@ Content-Type: application/json
     "base": 3,
     "altura": 2.4,
     "material": "Bloque"
+}
+
+####calcular pilar
+POST {{api}}/calculoPilar
+Content-Type: application/json
+
+{
+    "largo": 0.40,
+    "altura": 4,
+    "ancho": 0.40
 }

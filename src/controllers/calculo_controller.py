@@ -76,3 +76,75 @@ def calcular_pared (mateX,mateY):
         response = jsonify({"message": "Error de petición", "error": str(e)})
         response.status_code = 500
         return response
+
+#calcular pilar
+def calcular_pilar (mateX):
+    try:
+        matex = []
+        for doc in mateX.find():
+            mate = MateXModel(doc).__dict__
+            mate['_id'] = str(doc['_id'])
+            matex.append(mate)
+            
+        data = json.loads(request.data)
+
+        area = data['altura'] * data['ancho'] * data['largo']
+        arena = area * 0.52
+        cemento = area * 9.73
+        grava = area * 0.53
+        agua = area * 0.186
+
+        aceroY = 3.6 + (data['altura'] * 4)
+        estribo = 0.45 * ((5 + ((data['altura'] * 100) - 25)) / 10)
+
+        precios = {
+            "cemento":0,
+            "arena":0,
+            "grava" : 0,
+            "hierroLiso" : 0,
+            "hierroCorrugado" : 0
+        }
+
+        for mx in matex:
+            if mx['tipo'] == "Arena":
+                precios['arena'] = mx['precio']
+            elif mx['tipo'] == "Cemento":
+                precios['cemento'] = mx['precio']
+            elif mx['tipo'] == "Hierro":
+                precios['hierroLiso'] = mx['precio']
+                precios['hierroCorrugado'] = mx['precio']
+            elif mx['tipo'] == "Piedrin":
+                precios['grava'] = mx['precio']
+
+
+        res = {
+            "arena" : {
+                "cantidad" : round(arena,2),
+                "precio" : round(arena * precios['arena'],2)
+            },
+            "cemento" : {
+                "cantidad" : round(cemento,2),
+                "precio" : round(cemento * precios['cemento'],2)
+            },
+            "grava" : {
+                "cantidad" : round(grava,2),
+                "precio" : round(grava * precios['grava'],2)
+            },
+            "hierroCorrugado" : {
+                "cantidad" : round(aceroY, 2),
+                "precio" : round(aceroY * precios['hierroCorrugado'], 2)
+            },
+            "hierroLiso" : {
+                "cantidad" : round(estribo, 2),
+                "precio" : round(estribo * precios['hierroLiso'],2)
+            },
+            "agua" : int(agua * 1000)
+        }
+
+        return res
+
+    except Exception as e:
+        response = jsonify({"message": "Error de petición", "error": str(e)})
+        response.status_code = 500
+        return response
+
