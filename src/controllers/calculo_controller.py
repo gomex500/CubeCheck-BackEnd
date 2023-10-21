@@ -57,17 +57,17 @@ def calcular_pared (mateX,mateY):
 
         res = {
             "Arena": {
-                "cantidad":arena,
-                "precio":arena*precios['arena']
+                "cantidad":round(arena,2),
+                "precio":round(arena*precios['arena'],2)
             },
             "Agua": agua,
             "Cemento": {
-                "cantidad":cemento,
-                "precio":cemento*precios['cemento']
+                "cantidad":round(cemento,2),
+                "precio":round(cemento*precios['cemento'],2)
             },
             "Ladrillos": {
-                "cantidad":area,
-                "precio":area*materialBase['precio']
+                "cantidad":round(area,2),
+                "precio":round(area*materialBase['precio'],2)
             }
         }
         return res
