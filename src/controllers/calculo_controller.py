@@ -148,3 +148,58 @@ def calcular_pilar (mateX):
         response.status_code = 500
         return response
 
+#calcular pilar
+def calcular_embaldosado (mateX):
+    try:
+        matex = []
+        for doc in mateX.find():
+            mate = MateXModel(doc).__dict__
+            mate['_id'] = str(doc['_id'])
+            matex.append(mate)
+            
+        data = json.loads(request.data)
+
+        area = data['largo'] * data['ancho'] * data['grosor']
+        arena = area * 0.55
+        cemento = area * 350
+        grava = area * 0.84
+        agua = area * 0.170
+
+        precios = {
+            "cemento":0,
+            "arena":0,
+            "grava" : 0,
+        }
+
+        for mx in matex:
+            if mx['tipo'] == "Arena":
+                precios['arena'] = mx['precio']
+            elif mx['tipo'] == "Cemento":
+                precios['cemento'] = mx['precio']
+            elif mx['tipo'] == "Piedrin":
+                precios['grava'] = mx['precio']
+
+
+        res = {
+            "arena" : {
+                "cantidad" : round(arena,2),
+                "precio" : round(arena * precios['arena'],2)
+            },
+            "cemento" : {
+                "cantidad" : round(cemento,2),
+                "precio" : round(cemento * precios['cemento'],2)
+            },
+            "grava" : {
+                "cantidad" : round(grava,2),
+                "precio" : round(grava * precios['grava'],2)
+            },
+            "agua" : int(agua * 1000)
+        }
+
+        return res
+
+    except Exception as e:
+        response = jsonify({"message": "Error de petición", "error": str(e)})
+        response.status_code = 500
+        return response
+

@@ -4,7 +4,8 @@ from src.controllers.jwt import validar_token
 from src.configs.conecction import collections
 from src.controllers.calculo_controller import (
     calcular_pared,
-    calcular_pilar
+    calcular_pilar,
+    calcular_embaldosado
 )
 
 #inicializando rutas de los calculos
@@ -19,3 +20,8 @@ def calcular_pared_ruta():
 @calculos_routes.route('/calculoPilar', methods=['POST'])
 def calcular_pilar_ruta():
     return calcular_pilar(collections('materiales_x'))
+
+#ruta calcular embaldosado
+@calculos_routes.route('/calculoEmbaldosado', methods=['POST'])
+def calcular_embaldosado_ruta():
+    return calcular_embaldosado(collections('materiales_x'))
