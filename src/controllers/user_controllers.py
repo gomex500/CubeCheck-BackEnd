@@ -133,7 +133,7 @@ def actualizar_rol(collections, id):
     try:
         nuevo_rol = request.json.get('rol')
         print(request.json.get('rol'))
-        roles_validos = ['admin', 'user']
+        roles_validos = ['admin', 'user', 'premium']
         if nuevo_rol not in roles_validos:
             return jsonify({'message': 'Rol no válido'}), 400
 
@@ -183,3 +183,33 @@ def actualizar_password(collections, id):
 
     except Exception as e:
         return jsonify({'message': 'Error al actualizar la contraseña', 'error': str(e)}), 500
+
+#obtener todos los usuario por roles
+def obtener_nUsuarios(collections):
+    try:
+        users = []
+        nUsuarios = {
+            "user" : 0,
+            "admin": 0,
+            "premium" : 0
+        }
+        for doc in collections.find():
+            user = UserModel(doc).__dict__
+            user['_id'] = str(doc['_id'])
+            # Evitar agregar la contraseña a la lista de usuarios
+            user.pop('password', None)
+            users.append(user)
+
+        for n in users:
+            if n['rol'] == "user":
+                nUsuarios['user'] = nUsuarios['user'] + 1
+            elif n['rol'] == "admin":
+                nUsuarios['admin'] = nUsuarios['admin'] + 1
+            elif n['rol'] == "premium":
+                nUsuarios['premium'] = nUsuarios['premium'] + 1
+
+        return jsonify(nUsuarios)
+    except Exception as e:
+        response = jsonify({"message": "Error de petición", "error": str(e)})
+        response.status_code = 500
+        return response
