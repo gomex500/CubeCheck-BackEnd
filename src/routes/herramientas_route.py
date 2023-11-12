@@ -10,16 +10,6 @@ from src.controllers.herramientas_controllers import (
 #inicializando rutas de usuario
 herramienta_routes = Blueprint('herramienta_routes', __name__)
 
-#validacion de token
-@herramienta_routes.before_request
-def verificar_token():
-    try:
-        token = request.headers['Authorization'].split(" ")[1]
-        validar_token(token, output=False)
-    except:
-        return jsonify({"Menssage":"Error de autenticacion, no estas autorizado"})
-
-
 #crear herramienta
 @herramienta_routes.route('/tools', methods=['GET'])
 def ver_tool():
