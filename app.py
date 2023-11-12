@@ -6,6 +6,7 @@ from src.routes.materialesX_routes import materialx_routes
 from src.routes.materialesY_routes import materialy_routes
 from src.routes.proyectos_routes import proyectos_routes
 from src.routes.calculo_routes import calculos_routes
+from src.routes.herramientas_route import herramienta_routes
 from src.routes.home import home
 from src.configs.config import DEBUG, PORT
 
@@ -23,6 +24,7 @@ app.register_blueprint(materialx_routes)
 app.register_blueprint(materialy_routes)
 app.register_blueprint(proyectos_routes)
 app.register_blueprint(calculos_routes)
+app.register_blueprint(herramienta_routes)
 
 if __name__ == '__main__':
     app.run(debug=DEBUG, port=PORT)
