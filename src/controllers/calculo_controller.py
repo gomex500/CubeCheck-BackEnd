@@ -57,7 +57,7 @@ def calcular_pared (mateX,mateY):
 
         res = {
             "Arena": {
-                "cantidad":round(arena,2),
+                "cantidad":round(arena/0.019,2),
                 "precio":round(arena*precios['arena'],2)
             },
             "Agua": agua,
@@ -119,7 +119,7 @@ def calcular_pilar (mateX):
 
         res = {
             "arena" : {
-                "cantidad" : round(arena,2),
+                "cantidad" : round(arena/0.019,2),
                 "precio" : round(arena * precios['arena'],2)
             },
             "cemento" : {
@@ -127,7 +127,7 @@ def calcular_pilar (mateX):
                 "precio" : round(cemento * precios['cemento'],2)
             },
             "grava" : {
-                "cantidad" : round(grava,2),
+                "cantidad" : round(grava/0.019,2),
                 "precio" : round(grava * precios['grava'],2)
             },
             "hierroCorrugado" : {
@@ -182,7 +182,7 @@ def calcular_embaldosado (mateX):
 
         res = {
             "arena" : {
-                "cantidad" : round(arena,2),
+                "cantidad" : round(arena/0.019,2),
                 "precio" : round(arena * precios['arena'],2)
             },
             "cemento" : {
@@ -190,7 +190,7 @@ def calcular_embaldosado (mateX):
                 "precio" : round(cemento * precios['cemento'],2)
             },
             "grava" : {
-                "cantidad" : round(grava,2),
+                "cantidad" : round(grava/0.019,2),
                 "precio" : round(grava * precios['grava'],2)
             },
             "agua" : int(agua * 1000)

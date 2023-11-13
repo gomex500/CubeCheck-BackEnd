@@ -261,8 +261,8 @@ POST {{api}}/calculoPared
 Content-Type: application/json
 
 {
-    "base": 4,
-    "altura": 4,
+    "base": 12,
+    "altura": 3,
     "material": "Ladrillo"
 }
 
