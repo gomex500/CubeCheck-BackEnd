@@ -62,7 +62,7 @@ def calcular_pared (mateX,mateY):
             },
             "Agua": agua,
             "Cemento": {
-                "cantidad":round(cemento,2),
+                "cantidad":round(cemento/42.5,2),
                 "precio":round(cemento*precios['cemento'],2)
             },
             "Ladrillos": {
@@ -186,7 +186,7 @@ def calcular_embaldosado (mateX):
                 "precio" : round(arena * precios['arena'],2)
             },
             "cemento" : {
-                "cantidad" : round(cemento,2),
+                "cantidad" : round(cemento/42.5,2),
                 "precio" : round(cemento * precios['cemento'],2)
             },
             "grava" : {
