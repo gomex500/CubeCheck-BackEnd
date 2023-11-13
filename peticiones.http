@@ -4,7 +4,7 @@ GET {{api}}
 
 ###obtener los usuarios
 GET {{api}}/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTUwMDk3MH0.lCykygID1M7vzFRSQn8zwitGjyOO0XxrEl5_3ZW_lp8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTk4MTk3M30.bVng7OFFPasTGDhgdjHmq5BeUr_PIXD71D56LF0YZJE
 
 ###obtener los numero de usuarios x roles
 GET {{api}}/nusers
@@ -82,8 +82,8 @@ GET {{api}}/email/jawferw@gmail.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6MjUsInJvbCI6ImFkbWluIiwidGVsZWZvbm8iOjgyMTgxNDUzLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5NDgxNzUyOH0.iaVHE1eEKTh7JUYnU_PDdKUQL5h-vdafXfYCXHoQpWw
 
 ###actualizar rol del usuario
-PUT  {{api}}/rol/65028ef9b2c1c36236870402
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTUwMDk3MH0.lCykygID1M7vzFRSQn8zwitGjyOO0XxrEl5_3ZW_lp8
+PUT  {{api}}/rol/651cf9e093bdea2b330a82fe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTk4MTk3M30.bVng7OFFPasTGDhgdjHmq5BeUr_PIXD71D56LF0YZJE
 Content-Type: application/json
 
 {
@@ -190,11 +190,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZ
 ###ingresar proyectos
 POST {{api}}/proyectos
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5ODM0NzIwMH0.M6LqQ6g_Jxohh67rmOzF-Dwe_B-JJNjjedOJJZTwXGM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTk4Mjg2N30.prF_GTcLgJvEHgmhqM8bgRG7-Z935VC_2JzgsHJZcQY
 
 {
     "nombre": "My Home",
     "descripcion": "My first Home",
+    "user": "651cf9e093bdea2b330a82fe",
     "construccion": {
         "pisos": [
             {
@@ -210,11 +211,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZ
 }
 
 ###obtener los materiales y
-GET {{api}}/proyectos
+GET {{api}}/proyecto/651cf9e093bdea2b330a82fe
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTEzMDY3Nn0.RaxjrMGcyqBoWzkaai8RhXAqfz22CLWY-ra8850VVgk
 
 ###obtener los materiales y
-GET {{api}}/proyectos/65445cd18316e78d6ad484d4
+GET {{api}}/proyectos/6551695fadeae7d6579cbb0b
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJGcmVkZHkiLCJhcGVsbGlkbyI6IkdvbWV6IiwiZWRhZCI6IjI1Iiwicm9sIjoidXNlciIsInRlbGVmb25vIjoiODIxODE2NjMiLCJlbWFpbCI6ImdvbWV4Njc5OEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRDYkZoeVBjTmNjR2lnd0dyY01iR1gueC50SFQzZXJFRHF2TzE4WUVSOXM4aTRPdXNMRFptYSIsImV4cCI6MTY5OTEzMDY3Nn0.RaxjrMGcyqBoWzkaai8RhXAqfz22CLWY-ra8850VVgk
 
 ###eliminar material y
@@ -273,9 +274,9 @@ POST {{api}}/calculoEmbaldosado
 Content-Type: application/json
 
 {
-    "largo": 3,
-    "ancho": 3,
-    "grosor": 0.10
+    "largo": 1,
+    "ancho": 1,
+    "grosor": 0.15
 }   
 
 

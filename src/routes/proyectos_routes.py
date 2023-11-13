@@ -27,13 +27,13 @@ def insertar_proyectos_ruta():
     return insertar_proyecto(collections('proyectos'))
 
 #ruta mostrar materiales x
-@proyectos_routes.route('/proyectos', methods=['GET'])
-def obtener_proyectos_ruta():
-    return obtener_proyectos(collections('proyectos'))
+@proyectos_routes.route('/proyecto/<user>', methods=['GET'])
+def obtener_proyectos_ruta(user):
+    return obtener_proyectos(collections('proyectos'), user)
 
 #ruta mostrar usuario
 @proyectos_routes.route('/proyectos/<id>', methods=['GET'])
-def obtener_material_ruta(id):
+def obtener_proyectos_id_ruta(id):
     return obtener_proyecto(collections('proyectos'), id)
 
 #ruta eliminar usuario

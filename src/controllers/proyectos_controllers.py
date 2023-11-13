@@ -17,10 +17,10 @@ def insertar_proyecto(collections):
         return response
 
 #controlador mostrar proyecto
-def obtener_proyectos(collections):
+def obtener_proyectos(collections, user):
     try:
         proyectos = []
-        for doc in collections.find():
+        for doc in collections.find({"user": user}):
             proyecto = ProyectoModel(doc).__dict__
             proyecto['_id'] = str(doc['_id'])
             proyectos.append(proyecto)
