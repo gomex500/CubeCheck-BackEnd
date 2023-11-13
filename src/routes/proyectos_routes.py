@@ -44,4 +44,4 @@ def eliminar_proyectos_ruta(id):
 #ruta actualizar usuario
 @proyectos_routes.route('/proyectos/<id>', methods=['PUT'])
 def actualizar_proyectos_ruta(id):
-    return actualizar_proyecto(collections('proyectos'), id)
+    return actualizar_proyecto(collections('proyectos'), collections('materiales_x'), collections('materiales_y'), id)
