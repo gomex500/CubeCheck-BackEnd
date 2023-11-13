@@ -166,7 +166,7 @@ def actualizar_proyecto(collections,mateX, mateY, id):
             },
             "cemento" : {
                 "cantidad" : round(cemento,2),
-                "precio" : round(cemento * preciosPilares['cemento'],2)
+                "precio" : round((cemento*50) * preciosPilares['cemento'],2)
             },
             "grava" : {
                 "cantidad" : round(grava/0.019,2),
