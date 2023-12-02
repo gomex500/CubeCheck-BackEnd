@@ -30,6 +30,20 @@ def obtener_materialY(collections):
         response.status_code = 500
         return response
 
+#controlador mostrar proyecto
+def obtener_mis_materialY(collections, user):
+    try:
+        materiales = []
+        for doc in collections.find({"user": user}):
+            material = MateYModel(doc).__dict__
+            material['_id'] = str(doc['_id'])
+            materiales.append(material)
+        return jsonify(materiales)
+    except Exception as e:
+        response = jsonify({"message": "Error de petición", "error": str(e)})
+        response.status_code = 500
+        return response
+
 #controlador mostrar material
 def obtener_material(collections, id):
     try:

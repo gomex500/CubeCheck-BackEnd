@@ -10,6 +10,6 @@ class MateYModel:
         self.z = data.get('z', 0)
         self.precio = data.get('precio', 0)
         self.description = data.get('description', '')
-        self.creador = data.get('creador', '')
+        self.user = data.get('user', '')
         self.create_at = data.get('create_at', datetime.now())
         self.update_at = data.get('update_at', datetime.now())
