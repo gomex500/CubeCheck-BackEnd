@@ -101,11 +101,27 @@ def actualizar_proyecto(collections,mateX, mateY, id):
             elif mx['tipo'] == "Cemento":
                 preciosPared['cemento'] = mx['precio']
 
+        nVentanasF = (contruccion['pilaresZ'].length);
+        nVentanasT = (contruccion['pilaresZN'].length)+1;
+        nVentanasD = (contruccion['pilaresX'].length)+1;
+        nVentanasI = (contruccion['pilaresXN'].length)+1;
+
+        area1 = 0
+
+        if contruccion["ventanasF"]:
+            area1+= (1* nVentanasF) * 0.8
+        elif contruccion["ventanasT"]:
+            area1 += (1* nVentanasT) * 0.8
+        elif contruccion["ventanasD"]:
+            area1 += (1* nVentanasD) * 0.8
+        elif contruccion["ventanasI"]:
+            area1 += (1* nVentanasI) * 0.8
+
         #pared
         largoPared = ((contruccion["embaldosado"][0]*2)+(contruccion["embaldosado"][2]*2)) - grosorPilarTotal
         altoPared = contruccion["alturaParedes"]
 
-        area = int((largoPared*altoPared)/(((materialBase['y']+1.5)/100)*((materialBase['z']+1.5)/100)));
+        area = int((largoPared*altoPared)/(((materialBase['y']+1.5)/100)*((materialBase['z']+1.5)/100)))-area1;
         mortero = (largoPared* altoPared * (materialBase['x'] / 100))-(area * (materialBase['z']/100) * (materialBase['y']/100) * (materialBase['x'] / 100));
         cemento = round(float((302 * mortero)*1.05), 2)
         arena = round(float(1.2 * mortero),2)
