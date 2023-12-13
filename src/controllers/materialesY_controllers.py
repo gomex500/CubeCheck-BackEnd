@@ -20,7 +20,7 @@ def insertar_materialY(collections):
 def obtener_materialY(collections):
     try:
         materiales = []
-        for doc in collections.find():
+        for doc in collections.find({"creador": "10"}):
             material = MateYModel(doc).__dict__
             material['_id'] = str(doc['_id'])
             materiales.append(material)

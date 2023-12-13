@@ -20,7 +20,7 @@ def insertar_materialX(collections):
 def obtener_materialX(collections):
     try:
         materiales = []
-        for doc in collections.find():
+        for doc in collections.find({"creador": "10"}):
             material = MateXModel(doc).__dict__
             material['_id'] = str(doc['_id'])
             materiales.append(material)
