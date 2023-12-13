@@ -6,7 +6,8 @@ from src.controllers.materialesX_controllers import (
     obtener_materialX,
     obtener_material,
     eliminar_materialx,
-    actualizar_materialx
+    actualizar_materialx,
+    obtener_mis_materialX
     )
 
 #inicializando rutas de usuario
@@ -45,3 +46,8 @@ def eliminar_materialx_ruta(id):
 @materialx_routes.route('/materialx/<id>', methods=['PUT'])
 def actualizar_materialx_ruta(id):
     return actualizar_materialx(collections('materiales_x'), id)
+
+#ruta actualizar usuario
+@materialx_routes.route('/mismaterialx/<user>', methods=['GET'])
+def obtener_mismaterialx_ruta(user):
+    return obtener_mis_materialX(collections('materiales_x'), user)

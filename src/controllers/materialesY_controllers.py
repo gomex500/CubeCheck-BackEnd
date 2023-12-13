@@ -34,7 +34,7 @@ def obtener_materialY(collections):
 def obtener_mis_materialY(collections, user):
     try:
         materiales = []
-        for doc in collections.find({"user": user}):
+        for doc in collections.find({"creador": user}):
             material = MateYModel(doc).__dict__
             material['_id'] = str(doc['_id'])
             materiales.append(material)

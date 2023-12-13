@@ -34,7 +34,7 @@ def obtener_materialX(collections):
 def obtener_mis_materialX(collections, user):
     try:
         materiales = []
-        for doc in collections.find({"user": user}):
+        for doc in collections.find({"creador": user}):
             material = MateXModel(doc).__dict__
             material['_id'] = str(doc['_id'])
             materiales.append(material)
